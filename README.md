@@ -14,13 +14,14 @@ Eslint viene preinstalado en Next asi que lo iniciamos
 Iniciamos:
 
 ```npx eslint --init```
-``` npm add --dev eslint-plugin-react@latest eslint-config-standard@latest eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0```
+
 ### Agregar plugin
 
 ``` npm add --dev eslint-plugin-react@latest eslint-config-standard@latest eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0``` 
 
 En https://nextjs.org/docs/basic-features/eslint#migrating-existing-config hay mas info
 
+También agregamos
 ```npm install --save-dev @next/eslint-plugin-next```
 
 ## actualizar module
