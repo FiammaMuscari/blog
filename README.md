@@ -1,11 +1,62 @@
 ## Agregando Eslint en next
 
+Eslint viene preinstalado en Next asi que lo iniciamos
+
+### Tener en Preferencias
+
+ configuración > .json
+
+"editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true 
+    }
+}
+
+Iniciamos:
+
 ```npx eslint --init```
 ``` npm add --dev eslint-plugin-react@latest eslint-config-standard@latest eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0```
+### Agregar plugin
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+``` npm add --dev eslint-plugin-react@latest eslint-config-standard@latest eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0``` 
 
-## Getting Started
+En https://nextjs.org/docs/basic-features/eslint#migrating-existing-config hay mas info
+
+```npm install --save-dev @next/eslint-plugin-next```
+
+## actualizar module
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [  
+        "plugin:react/recommended",
+        "standard",
+        "plugin:@next/next/recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types":"off",
+      "react/react-in-jsx-scope":"off"
+    }
+}
+
+Listo, al guardar con Ctrl + s se acomodan solos los archivos.
+
+
+## Getting Started Nextjs
 
 First, run the development server:
 

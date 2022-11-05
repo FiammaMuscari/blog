@@ -3,9 +3,10 @@
         "browser": true,
         "es2021": true
     },
-    "extends": [
+    "extends": [  
         "plugin:react/recommended",
-        "standard"
+        "standard",
+        "plugin:@next/next/recommended"
     ],
     "overrides": [
     ],
