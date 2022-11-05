@@ -5,11 +5,12 @@ Eslint viene preinstalado en Next asi que lo iniciamos
 ### Tener en Preferencias
 
  configuración > .json
-
+```bash
 "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true 
     }
 }
+```
 
 Iniciamos:
 
@@ -25,7 +26,7 @@ También agregamos
 ```npm install --save-dev @next/eslint-plugin-next```
 
 ## actualizar module
-
+```bash
 {
     "env": {
         "browser": true,
@@ -53,6 +54,7 @@ También agregamos
       "react/react-in-jsx-scope":"off"
     }
 }
+```
 
 Listo, al guardar con Ctrl + s se acomodan solos los archivos.
 
