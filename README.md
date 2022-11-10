@@ -15,6 +15,8 @@ Eslint viene preinstalado en Next asi que lo iniciamos
 Iniciamos:
 
 ```npx eslint --init```
+y
+```npm run lint```
 
 ### Agregar plugin
 
@@ -40,19 +42,42 @@ También agregamos
     "overrides": [
     ],
     "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
         "react",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/prop-types":"off",
-      "react/react-in-jsx-scope":"off"
+      "react/react-in-jsx-scope":"off",
+      "prettier/prettier": "error",
+      "space-before-function-paren": "off"
     }
+}
+
+```
+
+### agregamos prettier
+```npm install --save-dev eslint-config-prettier```
+
+
+en prettier.config.js agregar
+
+```bash
+ module.exports = {
+  semi: false,
+  singleQuote: true,
+  arrowParens: 'avoid',
+  trailingComma: 'none',
+  endOfLine: 'auto'
 }
 ```
 
